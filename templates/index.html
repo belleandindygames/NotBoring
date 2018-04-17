@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>   
+<body>
+   
+      <h1>HDD Bore Caaaaalculator</h1>
+      <canvas id="myChart"></canvas>
+   </body>
+   <script>
+        var ctx = document.getElementById('myChart').getContext('2d');
+        var chart = new Chart(ctx, {
+            // The type of chart we want to create
+            type: 'line',
+
+            // The data for our dataset
+            data: {
+                labels: ["Starty", "Bottom", "Exit"],
+                datasets: [{
+                    label: "My First dataset",
+                    
+                    borderColor: 'rgb(255, 99, 132)',
+                    data: [{{start}}, {{mid}}, {{end}}],
+                }]
+            },
+
+            // Configuration options go here
+            options: {}
+        });
+   </script>
+   
+</html>
